@@ -45,4 +45,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let videoViewController = VideoViewController()
+        let url = Utils.createLocalUrl(for: videos[indexPath.row], ofType: "mp4") ?? URL(fileURLWithPath: "")
+        videoViewController.videoURL = url
+        self.present(videoViewController, animated: true, completion: nil)
+    }
 }

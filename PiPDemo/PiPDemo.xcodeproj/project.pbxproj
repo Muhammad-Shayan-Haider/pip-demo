@@ -10,6 +10,8 @@
 		B6937A4127FACCC9006C59CE /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A3F27FACCC9006C59CE /* VideoCell.swift */; };
 		B6937A4227FACCC9006C59CE /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6937A4027FACCC9006C59CE /* VideoCell.xib */; };
 		B6937A4427FACD3E006C59CE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A4327FACD3E006C59CE /* Utils.swift */; };
+		B6937A4727FAD794006C59CE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A4527FAD793006C59CE /* VideoViewController.swift */; };
+		B6937A4827FAD794006C59CE /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6937A4627FAD793006C59CE /* VideoViewController.xib */; };
 		B6A19C8227F9CABE00685576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8127F9CABE00685576 /* AppDelegate.swift */; };
 		B6A19C8427F9CABE00685576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8327F9CABE00685576 /* SceneDelegate.swift */; };
 		B6A19C8627F9CABE00685576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8527F9CABE00685576 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		B6937A3F27FACCC9006C59CE /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		B6937A4027FACCC9006C59CE /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		B6937A4327FACD3E006C59CE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B6937A4527FAD793006C59CE /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		B6937A4627FAD793006C59CE /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		B6A19C7E27F9CABE00685576 /* PiPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A19C8127F9CABE00685576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A19C8327F9CABE00685576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				B6937A3F27FACCC9006C59CE /* VideoCell.swift */,
 				B6937A4027FACCC9006C59CE /* VideoCell.xib */,
 				B6937A4327FACD3E006C59CE /* Utils.swift */,
+				B6937A4527FAD793006C59CE /* VideoViewController.swift */,
+				B6937A4627FAD793006C59CE /* VideoViewController.xib */,
 			);
 			path = PiPDemo;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				B6A19C8E27F9CAC100685576 /* LaunchScreen.storyboard in Resources */,
 				B6937A4227FACCC9006C59CE /* VideoCell.xib in Resources */,
 				B6A19C8B27F9CAC100685576 /* Assets.xcassets in Resources */,
+				B6937A4827FAD794006C59CE /* VideoViewController.xib in Resources */,
 				B6A19C8927F9CABE00685576 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +157,7 @@
 			files = (
 				B6937A4427FACD3E006C59CE /* Utils.swift in Sources */,
 				B6A19C8627F9CABE00685576 /* ViewController.swift in Sources */,
+				B6937A4727FAD794006C59CE /* VideoViewController.swift in Sources */,
 				B6937A4127FACCC9006C59CE /* VideoCell.swift in Sources */,
 				B6A19C8227F9CABE00685576 /* AppDelegate.swift in Sources */,
 				B6A19C8427F9CABE00685576 /* SceneDelegate.swift in Sources */,
