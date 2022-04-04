@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             try session.setCategory(.playback, mode: .moviePlayback)
-        } catch let err {
-            print(err.localizedDescription)
+        } catch _ {
+            debugPrint("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
         return true
     }
