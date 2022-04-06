@@ -14,9 +14,12 @@ class VideoViewController: UIViewController {
     private var player: AVPlayer!
     private var playerViewController = AVPlayerViewController()
     var videoURL: URL = URL(fileURLWithPath: "")
+    var pipController: AVPictureInPictureController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupPipController()
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
@@ -24,17 +27,25 @@ class VideoViewController: UIViewController {
     }
     
     @IBAction func playVideo(_ sender: UIButton) {
-        playVideoInView()
+        playInPip()
     }
     
+    func playInPip() {
+        if let pipController = pipController {
+            pipController.startPictureInPicture()
+            pipController.playerLayer.player?.play()
+        }
+    }
+    
+    // Creates new AVController and plays video in it.
     func playVideoInAVController() {
         // Create an AVPlayer, passing it the HTTP Live Streaming URL.
         let player = AVPlayer(url: videoURL)
-        
+
         // Create a new AVPlayerViewController and pass it a reference to the player.
         let controller = AVPlayerViewController()
         controller.player = player
-        
+
         // Modally present the player and call the player's play() method when complete.
         present(controller, animated: true) {
             player.play()
@@ -45,6 +56,20 @@ class VideoViewController: UIViewController {
         playVideoInView()
     }
     
+    // Setup pip controller for playing video in pip.
+    private func setupPipController() {
+        let player = AVPlayer(url: videoURL)
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        
+        playerLayer.frame = self.playerView.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        playerView.layer.addSublayer(playerLayer)
+        
+        pipController = AVPictureInPictureController(playerLayer: playerLayer)
+    }
+    
+    // Plays AVVideoController video in view.
     func playVideoInView() {
         player = AVPlayer(url: videoURL)
         playerViewController.player = player
@@ -52,5 +77,13 @@ class VideoViewController: UIViewController {
         playerViewController.view.frame.size.width = playerView.frame.size.width
         self.playerView.addSubview(playerViewController.view)
         player.play()
+    }
+}
+
+
+extension AVPlayer {
+    
+    var isPlaying: Bool {
+        return rate != 0 && error == nil
     }
 }
