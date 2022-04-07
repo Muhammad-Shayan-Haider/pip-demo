@@ -7,9 +7,16 @@
 
 import UIKit
 import AVKit
+import UIPiPView
 
 class VideoViewController: UIViewController {
     
+    @IBOutlet weak var pipViewLabel: UILabel! {
+        didSet {
+            pipViewLabel.text = "PiP me!"
+        }
+    }
+    @IBOutlet weak var pipView: UIPiPView!
     @IBOutlet weak var playerView: UIView!
     private var player: AVPlayer!
     private var playerViewController = AVPlayerViewController()
@@ -54,6 +61,23 @@ class VideoViewController: UIViewController {
     
     @IBAction func play(_ sender: UIButton) {
         playVideoInView()
+    }
+    
+    
+    @IBAction func pipGivenView(_ sender: UIButton) {
+        if UIPiPView.isUIPiPViewSupported() {
+            pipViewLabel.text = "I am PiPed!"
+            pipView.startPictureInPictureWithManualCallRender()
+            pipView.render()
+        }
+    }
+    
+    
+    @IBAction func stopPiPView(_ sender: UIButton) {
+        if UIPiPView.isUIPiPViewSupported() && pipView.isPictureInPictureActive() {
+            pipViewLabel.text = "PiP me!"
+            pipView.stopPictureInPicture()
+        }
     }
     
     // Setup pip controller for playing video in pip.
