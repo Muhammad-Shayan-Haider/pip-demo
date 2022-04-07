@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33DD674B0AC15ECC4484947E /* Pods_PiPDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB6819F6845F5251AEB4F0A /* Pods_PiPDemo.framework */; };
+		B6937A4127FACCC9006C59CE /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A3F27FACCC9006C59CE /* VideoCell.swift */; };
+		B6937A4227FACCC9006C59CE /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6937A4027FACCC9006C59CE /* VideoCell.xib */; };
+		B6937A4427FACD3E006C59CE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A4327FACD3E006C59CE /* Utils.swift */; };
+		B6937A4727FAD794006C59CE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6937A4527FAD793006C59CE /* VideoViewController.swift */; };
+		B6937A4827FAD794006C59CE /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6937A4627FAD793006C59CE /* VideoViewController.xib */; };
 		B6A19C8227F9CABE00685576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8127F9CABE00685576 /* AppDelegate.swift */; };
 		B6A19C8427F9CABE00685576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8327F9CABE00685576 /* SceneDelegate.swift */; };
 		B6A19C8627F9CABE00685576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A19C8527F9CABE00685576 /* ViewController.swift */; };
@@ -16,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CB6819F6845F5251AEB4F0A /* Pods_PiPDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiPDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A8960F8D02EB47D0661223 /* Pods-PiPDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiPDemo.release.xcconfig"; path = "Target Support Files/Pods-PiPDemo/Pods-PiPDemo.release.xcconfig"; sourceTree = "<group>"; };
+		72707B06D2B4109B6A83D2D6 /* Pods-PiPDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiPDemo.debug.xcconfig"; path = "Target Support Files/Pods-PiPDemo/Pods-PiPDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B6937A3F27FACCC9006C59CE /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		B6937A4027FACCC9006C59CE /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		B6937A4327FACD3E006C59CE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B6937A4527FAD793006C59CE /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		B6937A4627FAD793006C59CE /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		B6A19C7E27F9CABE00685576 /* PiPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A19C8127F9CABE00685576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A19C8327F9CABE00685576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DD674B0AC15ECC4484947E /* Pods_PiPDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80FCD159244BF570676A5EDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72707B06D2B4109B6A83D2D6 /* Pods-PiPDemo.debug.xcconfig */,
+				55A8960F8D02EB47D0661223 /* Pods-PiPDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9894E5350BC0A7764ADFA730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CB6819F6845F5251AEB4F0A /* Pods_PiPDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6A19C7527F9CABE00685576 = {
 			isa = PBXGroup;
 			children = (
 				B6A19C8027F9CABE00685576 /* PiPDemo */,
 				B6A19C7F27F9CABE00685576 /* Products */,
+				80FCD159244BF570676A5EDC /* Pods */,
+				9894E5350BC0A7764ADFA730 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +98,11 @@
 				B6A19C8A27F9CAC100685576 /* Assets.xcassets */,
 				B6A19C8C27F9CAC100685576 /* LaunchScreen.storyboard */,
 				B6A19C8F27F9CAC100685576 /* Info.plist */,
+				B6937A3F27FACCC9006C59CE /* VideoCell.swift */,
+				B6937A4027FACCC9006C59CE /* VideoCell.xib */,
+				B6937A4327FACD3E006C59CE /* Utils.swift */,
+				B6937A4527FAD793006C59CE /* VideoViewController.swift */,
+				B6937A4627FAD793006C59CE /* VideoViewController.xib */,
 			);
 			path = PiPDemo;
 			sourceTree = "<group>";
@@ -74,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6A19C9227F9CAC100685576 /* Build configuration list for PBXNativeTarget "PiPDemo" */;
 			buildPhases = (
+				0D93F8E4250EBD62B5923002 /* [CP] Check Pods Manifest.lock */,
 				B6A19C7A27F9CABE00685576 /* Sources */,
 				B6A19C7B27F9CABE00685576 /* Frameworks */,
 				B6A19C7C27F9CABE00685576 /* Resources */,
+				31E40154DEE7740F9499863C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,19 +168,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A19C8E27F9CAC100685576 /* LaunchScreen.storyboard in Resources */,
+				B6937A4227FACCC9006C59CE /* VideoCell.xib in Resources */,
 				B6A19C8B27F9CAC100685576 /* Assets.xcassets in Resources */,
+				B6937A4827FAD794006C59CE /* VideoViewController.xib in Resources */,
 				B6A19C8927F9CABE00685576 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D93F8E4250EBD62B5923002 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiPDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31E40154DEE7740F9499863C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiPDemo/Pods-PiPDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiPDemo/Pods-PiPDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiPDemo/Pods-PiPDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6A19C7A27F9CABE00685576 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6937A4427FACD3E006C59CE /* Utils.swift in Sources */,
 				B6A19C8627F9CABE00685576 /* ViewController.swift in Sources */,
+				B6937A4727FAD794006C59CE /* VideoViewController.swift in Sources */,
+				B6937A4127FACCC9006C59CE /* VideoCell.swift in Sources */,
 				B6A19C8227F9CABE00685576 /* AppDelegate.swift in Sources */,
 				B6A19C8427F9CABE00685576 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,11 +373,15 @@
 		};
 		B6A19C9327F9CAC100685576 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72707B06D2B4109B6A83D2D6 /* Pods-PiPDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XZY8P96QU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiPDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -311,11 +404,15 @@
 		};
 		B6A19C9427F9CAC100685576 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A8960F8D02EB47D0661223 /* Pods-PiPDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XZY8P96QU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiPDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
